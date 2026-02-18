@@ -1,0 +1,301 @@
+\documentclass[12pt]{article}     % Define document type as article and font as 12
+
+\usepackage{graphicx}			  % Use this package to include images
+\usepackage{amsmath, amssymb}	  % A library of many standard math expressions and symbols
+\usepackage[margin=1in]{geometry} % Sets 1in margins. 
+\usepackage{fancyhdr}			  % Creates headers and footers for homework pages
+\usepackage{siunitx}              % Correct formatting for units (e.g., Celsius, Newtons)
+\usepackage{booktabs}             % Professional quality tables
+\usepackage{enumerate}            % Custom list labels for labeling problem sets
+\usepackage{hyperref}             % Clickable links and references
+\usepackage{xcolor}               % Color support
+
+\usepackage[shortlabels]{enumitem}% Control over list formatting
+\usepackage{caption}              % Better caption formatting
+
+
+% Define a custom "abstract-style" section called Introduction for making a centered paper introduction
+\makeatletter
+\newenvironment{intro}{%
+    \if@twocolumn
+      \section*{Introduction}%
+    \else
+      \small
+      \begin{center}%
+        {\bfseries Introduction\par}%
+      \end{center}%
+      \quotation
+    \fi
+}{%
+    \if@twocolumn\else\endquotation\fi
+}
+\makeatother
+% end of custom introduction element
+
+\begin{document}  % begin the actual document here
+% custom beginning of the title page goes here
+\begin{center}
+    {\LARGE\bfseries PY413 Thermal Education and Research Laboratory (EaRL) Spring 2026\par}
+    \vspace{1.5em}
+    {\large Joshua H. Elkins, Author 2, Author 3\par}
+    \vspace{0.5em}
+    {\normalsize College of Sciences, North Carolina State University\par}
+    \vspace{0.5em}
+    {\normalsize \today\par}
+\end{center}
+
+% Content of the introduction goes here
+\begin{intro}
+    This is Group 9's report for the Thermal Physics Spring 2026 EaRL in the Classroom.  The report details the phenomenon of unexpected temperature change in entropic springs resulting from the first two laws of thermodynamics, records a series of lab observations of a rubber band's changing entropy and temperature, provides an explanation of theory and models to explain the observations, and then poses a series of questions and answers to provide further analysis of the systems under investigation.
+\end{intro}
+
+% generate un-numbered table of contents with page numbers
+\tableofcontents
+\setcounter{tocdepth}{1}
+
+
+% Block of code for each new paper header
+\newpage % Create New Page
+\pagestyle{fancy} % Creates the header and footer. You can adjust the look and feel of these here.
+\fancyhead[l]{Elkins et al.} % Author names in the Header
+\fancyhead[c]{Physics 413 - Thermal Physics - EarL} % Change for different section
+\fancyhead[r]{\today} % Date on right side
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt} %Creates a horizontal line underneath the header
+\setlength{\headheight}{15pt} %Sets enough space for the header
+
+% --- Theory Section I ---
+\section{Theory I: Entropic Elasticity in Rubber}
+
+The tension force generated when you stretch something can be complicated. However, a good first-order model for relatively small displacements in most materials is Hooke's Law:
+    $$F = -kx$$
+where $F$ is the restorative force, $k$ is the stiffness, and $x$ is the displacement.
+
+For elastic polymeric materials, the "spring constant" is related to the entropy. As Schroeder explains, "Polymers, like rubber, are made of very long molecules, usually tangled up in a configuration that has lots of entropy."
+
+These long molecules have stiff segments (like links in a chain) but can otherwise collapse and fold. In a solid, the chains are both "relaxed" (collapsed/folded) and entangled with each other. When you pull on the clumped-up chains, some elongate, reducing the configurational entropy.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/Theory1.png}
+    \caption{A crude model of a polymer chain where each link (length $\ell$) can only point left or right. (Based on Schroeder, Fig 3.17).}
+    \label{fig:polymer}
+\end{figure}
+
+Schroeder describes a model where if you pulled the chain taut, its length would be $L = N\ell$. However, in real materials, the chains are much shorter ($L \ll N\ell$) and tangled. In the "relaxed" case, chains have many possible configurations and thus greater entropy.
+
+\subsection*{Thermodynamic Consequences}
+Consider the sudden stretching of a rubber band. Because the change is quick, the band does not exchange heat with the environment ($Q=0$). However, the entropy associated with the configuration decreases because chains are stretched out. 
+
+Due to the Second Law of Thermodynamics, $\Delta S_{\text{net}} \geq 0$. Therefore, the entropy due to thermal fluctuations must increase by at least as much as the configurational entropy decreased. This is achieved by a change in temperature.
+
+\subsection*{}
+
+% --- Experiment I ---
+\section{Experiment I: Rapid Elongation}
+
+\subsection*{Setup and Safety}
+\begin{enumerate}
+    \item \textbf{Safety:} Put on safety glasses.
+    \item \textbf{Load Sample:} We use an Instron Material Testing System (Figure \ref{fig:instruments}). Follow the TA's instructions to load the rubber sheet into the clamps.
+    \item \textbf{Software Setup:} Open "Bluehill 3". 
+    \begin{itemize}
+        \item Use manual controls ("Jog Down") to make the rubber slightly slack.
+        \item Press "Balance Load" and "Zero Extension" to zero the instrument.
+    \end{itemize}
+    \item \textbf{Thermometer Practice:} Practice using the IR thermometer on objects in the room. Note that it takes a few seconds to get an averaged reading.
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    % Placeholder for Instron image
+    \includegraphics[width=0.45\textwidth]{./images/Experiment1.png} 
+    % \fbox{\begin{minipage}{0.45\textwidth} \centering \vspace{3cm} [Insert Figure 2: Instron Machine] \vspace{3cm} \end{minipage}}
+    \hfill
+    % Placeholder for Software image
+    \includegraphics[width=0.45\textwidth]{./images/Experiment2.png} 
+    % \fbox{\begin{minipage}{0.45\textwidth} \centering \vspace{3cm} [Insert Figure 2: Instron Machine] \vspace{3cm} \end{minipage}}
+    %\fbox{\begin{minipage}{0.45\textwidth} \centering \vspace{3cm} [Insert Figure 3: Bluehill Software] \vspace{3cm} \end{minipage}}
+    \caption{Left: The Instron tensile tester. Right: The Bluehill software interface.}
+    \label{fig:instruments}
+\end{figure}
+
+\subsection*{Measurement Procedure}
+\begin{enumerate}[resume]
+    \item \textbf{Select Method:} Click "Test" and select a method starting with \texttt{PY413\_RapidStretch} followed by a speed.
+    \item \textbf{Filename:} Save as \texttt{GroupX\_rapid\_stretch\_[speed]}.
+    \item \textbf{Measure:}
+    \begin{enumerate}
+        \item Record the \textbf{Initial Temperature} (unstretched).
+        \item Take picture of unstretched sample (\ref{fig:unstretched}) 
+        \item Click "Start". Keep the IR thermometer on the rubber.
+        \item Record the \textbf{End Temperature} immediately after the cross-bar stops.
+        \item Press "Return" to relax the sample.
+    \end{enumerate}
+    \item \textbf{Repeat:} Perform this three times with fresh samples, changing the speed each time.
+\end{enumerate}
+
+\begin{table}[ht]
+    \centering
+    \addcontentsline{toc}{subsection}{Experimental Data: Table 1}
+    \label{tab:exp1}
+    \caption{Experimental observations for rapid stretching.}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{@{}c c c c c c@{}}
+        \midrule
+        \multicolumn{6}{l}{\textbf{Band Width: \_\_\_ \; \; \; \; \; Band Thickness: \_\_\_}} \\
+        \midrule
+        \textbf{Trial} & \textbf{Speed} & \textbf{Temp Initial} & \textbf{Temp Final} & \textbf{Length Initial} & \textbf{Length Final}\\
+        \midrule
+        1 & & & & & \\
+        \midrule
+        2 & & & & & \\
+        \midrule
+        3 & & & & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/Unstretched.png} % Currently held by placeholder image until lab is complete and image is taken
+    \caption{A picture of our rubber band in the tensile testing apparatus, unstretched.}
+    \label{fig:unstretched}
+\end{figure}
+
+\subsection*{Questions (To be turned in)}
+\begin{enumerate}[label=\Alph*)]
+    \addcontentsline{toc}{subsection}{Question A}
+    \item Graph the force vs. temperature for each speed. Assume temperature increases linearly during stretching. Label axes clearly.
+
+    {\bfseries Solution:} Solution A Here.
+    \addcontentsline{toc}{subsection}{Question B}
+    \item Explain your observations. Why are the results from the trials different or the same?
+
+    {\bfseries Solution:} Solution B Here.
+    \addcontentsline{toc}{subsection}{Question C}
+    \item Explain the theoretical reasoning for why the temperature should increase based on thermodynamic principles. How do your results support this?
+
+    {\bfseries Solution:} Solution C Here.
+\end{enumerate}
+
+% --- Theory Section II ---
+\section{Theory II: Temperature Dependence of Spring Constant}
+
+For small changes, the First Law of Thermodynamics states:
+\begin{equation} \label{eq:firstlaw}
+    dU = dQ + dW
+\end{equation}
+The relationship between heat ($Q$) and entropy ($S$) is:
+\begin{equation} \label{eq:heat}
+    dQ = TdS
+\end{equation}
+For isothermally stretching a rubber band of length $L$, the work done on the rubber is:
+\begin{equation} \label{eq:work}
+    dW = \langle F \rangle dL
+\end{equation}
+Combining Equations \ref{eq:firstlaw}--\ref{eq:work} where $\langle F \rangle$ is the average force exerted by the material as it is stretched from length $L$ to length $L+dL$:
+\begin{equation} \label{eq:combined}
+    \langle F \rangle dL = dU - TdS
+\end{equation}
+Schroeder argues that entropy is a function of band length length $L$ (see \ref{fig:polymer}) and temperature:
+\begin{equation} \label{eq:entropy funtion}
+    S = S(L, T)
+\end{equation}
+We further assume internal energy depends only on temperature independently of extension $L$:
+\begin{equation}
+    U = U(T) \implies \left(\frac{\partial U}{\partial L}\right)_{T} = 0
+\end{equation}
+
+
+\subsection*{Question (To be turned in)}
+\begin{enumerate}[label=\Alph*), start=4]
+    \addcontentsline{toc}{subsection}{Question D}
+    \item With these assumptions, the tension force can be expressed in terms of a partial derivative of entropy and temperature. Derive this expression starting from Eq. \ref{eq:combined}. Call this \textbf{Equation (7)}.  (In working Schroeder problem 3.34 one can derive a more complete version of equation 7 which shows both the linearity with L, the spring part, and the linearity with T, the entropic spring part).
+
+    {\bfseries Solution:} Solution D Here.
+\end{enumerate}
+
+% --- Experiment II ---
+\section{Experiment II: Temperature Dependence of Tension}
+
+We will place the rubber in a stretched state (holding $L$ constant), allow it to cool, and then observe the dependence of tension on temperature.
+
+\subsection*{Procedure}
+\begin{enumerate}[resume]
+    \item \textbf{Setup:} Use the last sample from Experiment I. Ensure it is unstretched.
+    \item \textbf{Method:} Select \texttt{PY413\_stress\_relaxation.im\_tens}.
+    \item \textbf{Protocol:}
+    \begin{itemize}
+        \item The machine will stretch to \SI{28.5}{N}, then slowly to \SI{30}{N}.
+        \item It then holds length constant (Stress Relaxation).
+        \item \textbf{Measurement 1 (No Heat):} Allow the rubber to relax naturally for several minutes without heating. Monitor the force decay.
+        \item \textbf{Measurement 2 (With Heat):} 
+        \begin{enumerate}
+            \item Wait for rubber to cool to the unstretched temperature.
+            \item Use the heat gun (lowest setting) to heat the rubber to a target between \SI{23}{\celsius} and \SI{40}{\celsius}.
+            \item \textbf{Do not exceed \SI{40}{\celsius}.}
+            \item Remove heat immediately, record the peak temperature and time.
+            \item Let it cool, then repeat for a different target temperature.
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+
+%\newpage % makes certian that analysis and questions come after the table
+
+\begin{table}[!h]
+    \centering
+    \addcontentsline{toc}{subsection}{Experimental Data: Table 2}
+    \caption{Data analysis for force as a function of temperature.}
+    \label{tab:exp2}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{@{}p{1cm} p{1.5cm} p{2cm} p{2cm} p{1.5cm} p{2cm} p{1.5cm}@{}}
+        \toprule
+        \multicolumn{7}{l}{\textbf{Initial Unstretched Temperature: \_\_\_\_\_\_\_\_}} \\
+        \midrule
+        \textbf{Trial} & \textbf{Time} & \textbf{Max Temp} & \textbf{$\Delta$ Temp} & \textbf{Peak Force} & \textbf{Expected Force (No Heat)} & \textbf{$\Delta$ Force} \\
+        \midrule
+        1 & $t_1$ & & & & & \\
+        \midrule
+        2 & & & & & & \\
+        \midrule
+        3 & & & & & & \\
+        \midrule
+        4 & & & & & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection*{Analysis and Questions (To be turned in)}
+\begin{enumerate}[label=\Alph*), start=5]
+    \addcontentsline{toc}{subsection}{Question E}
+    \item Graph \textbf{Force vs. Time} for Measurement 1 and Measurement 2. Label axes and the two graphs clearly.
+
+    {\bfseries Solution:} Solution E Here.
+    \addcontentsline{toc}{subsection}{Question F}
+    \item Fill out Table 2. Identify the "heating peaks" in Measurement 2. Compare the Peak Force to the "Expected Force" (baseline from Measurement 1 at that specific time). Calculate $\Delta F$.
+
+    {\bfseries Solution:} Solution F Here.
+    \addcontentsline{toc}{subsection}{Question G}
+    \item Plot $\Delta F$ vs $\Delta T$. Apply a linear fit. Turn in this graph, including the fit equation and $R^2$ value.
+
+    {\bfseries Solution:} Solution G Here.
+    \addcontentsline{toc}{subsection}{Question H}
+    \item The theory relies on the assumption $L \ll N\ell$. How could you change the experiment to test this assumption?
+
+    {\bfseries Solution:} Solution H Here.
+    \addcontentsline{toc}{subsection}{Question I}
+    \item What are the conditions/limits for the force law derivation (Equation 7), and are they consistent with this experiment?
+
+    {\bfseries Solution:} Solution I Here.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+    \bibitem{Euler} M. Euler. "Hooke's law and material science projects: exploring energy and entropy springs". \textit{Phys. Edu.}, 2008, 43: 57-61.
+    \bibitem{Marx} G. Marx, J. Ogborn and P. Tasnadi. "Rubber as a medium for teaching thermodynamics". \textit{Euro. J. Phys.}, 1984, 5 (4): 232-237.
+    \bibitem{Schroeder} Daniel V. Schroeder. \textit{An Introduction to Thermal Physics}. San Francisco: Addison-Wesley (2000).
+    \bibitem{Authors} Original Lab authors: Theodore (Ted) Brzinski III and Karen Daniels.
+    \bibitem{ReportAuthors} Lab report authors: Joshua H. Elkins, Author I, and Author II
+\end{thebibliography}
+
+\end{document}
