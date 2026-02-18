@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771438838.54534 "EarL.tex" "EarL.pdf" "EarL" 1771438839.24443 0
+["pdflatex"] 1771439951.61077 "EarL.tex" "EarL.pdf" "EarL" 1771439952.31919 0
   "/nix/store/ircxxmnj7584drddhzrk8r1pq63a24x9-texlive-2025-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5523625 a2e455f93ad4945e36274baa0571b3e8 ""
   "/nix/store/ircxxmnj7584drddhzrk8r1pq63a24x9-texlive-2025-env/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3600353 b3479ef4787e89c781649877826e6148 ""
   "/nix/store/ircxxmnj7584drddhzrk8r1pq63a24x9-texlive-2025-env/share/texmf-var/web2c/texmf.cnf" 1 43847 2f0b0ac2ecf3081ba3e22417bfa2236f ""
@@ -163,9 +163,9 @@
   "/nix/store/qj971xbmpyff2na6b62agy00kzabs7a7-texlive-2025-env-texmfdist/tex/latex/pgfplots/pgfplots.sty" 1 4904 ee78b44e85d6fccf08cd99370557481e ""
   "/nix/store/qj971xbmpyff2na6b62agy00kzabs7a7-texlive-2025-env-texmfdist/tex/latex/tools/enumerate.sty" 1 3468 f21ceb3448a22fec45299f924e7fc48b ""
   "/nix/store/qj971xbmpyff2na6b62agy00kzabs7a7-texlive-2025-env-texmfdist/tex/latex/xcolor/xcolor.sty" 1 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "EarL.aux" 1771438839.16702 204 508b50f86d64caeda179cab3550e98f6 "pdflatex"
-  "EarL.tex" 1771438836.96397 2866 9a76efcccda35f56e115d9bcae387aa3 ""
-  "EarL.toc" 1771438839.16876 90 50f2dacd153ad3282787c4896cc352e4 "pdflatex"
+  "EarL.aux" 1771439952.22276 204 508b50f86d64caeda179cab3550e98f6 "pdflatex"
+  "EarL.tex" 1771439950.28126 2883 f7b7550d9a5bb01f9d6d536f35941e26 ""
+  "EarL.toc" 1771439952.22338 90 50f2dacd153ad3282787c4896cc352e4 "pdflatex"
   (generated)
   "EarL.aux"
   "EarL.log"
