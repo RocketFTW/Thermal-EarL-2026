@@ -1,1 +1,2 @@
 # Thermal-EarL-2026
+This is our group's report for the Thermal Physics Spring 2026 EarL in the Classroom.  The report details the phenomenon of irregular temperature change which is being investigated, records a series of lab observations, provides an explanation of theory and models to explain the observations, and then poses a series of questions and answers to provide further analysis of the systems under investigation.
