@@ -9,10 +9,28 @@
 \usepackage{enumerate}            % Custom list labels for labeling problem sets
 \usepackage{hyperref}             % Clickable links and references
 \usepackage{xcolor}               % Color support
+\usepackage{listings}             % for code displaying
+
 
 \usepackage[shortlabels]{enumitem}% Control over list formatting
 \usepackage{caption}              % Better caption formatting
 
+% define coding colors
+\lstset{
+  basicstyle=\ttfamily\small, % Monospace font, small size
+  backgroundcolor=\color{gray!10}, % Light gray background
+  frame=single, % Thin border around the code
+  rulecolor=\color{black!30}, % Border color
+  numbers=left, % Line numbers on the left
+  numberstyle=\tiny\color{gray}, % Line number style
+  keywordstyle=\color{blue}, % Keywords in blue (language-specific)
+  commentstyle=\color{green!60!black}, % Comments in dark green
+  stringstyle=\color{red!60!black}, % Strings in reddish
+  showstringspaces=false, % Don't underline spaces in strings
+  breaklines=true, % Wrap long lines
+  tabsize=2, % Tab width
+  captionpos=b, % Caption below the listing
+}
 
 % Define a custom "abstract-style" section called Introduction for making a centered paper introduction
 \makeatletter
@@ -37,7 +55,7 @@
 \begin{center}
     {\LARGE\bfseries PY413 Thermal Education and Research Laboratory (EaRL) Spring 2026\par}
     \vspace{1.5em}
-    {\large Group 9: Joshua H. Elkins, Author 2, Author 3\par}
+    {\large Group 9: Joshua H. Elkins, Lucas Bots, Ian Shearer\par}
     \vspace{0.5em}
     {\normalsize College of Sciences, North Carolina State University\par}
     \vspace{0.5em}
@@ -159,7 +177,13 @@ Due to the Second Law of Thermodynamics, $\Delta S_{\text{net}} \geq 0$. Therefo
 \begin{figure}[h!]
     \centering
     \addcontentsline{toc}{subsection}{Photograph of Experiment: Unstretched Rubber Band}
-    \includegraphics[width=0.8\textwidth]{./Images/Unstretched.png} % Currently held by placeholder image until lab is complete and image is taken
+    %\includegraphics[width=0.8\textwidth]{./Images/Unstretched.png}     \fbox{ % Delete placeholder
+    \fbox{ % Delete placeholder
+        \begin{minipage}[c][6cm][c]{0.8\linewidth}
+            \centering
+            Plot A
+        \end{minipage}
+    }
     \caption{A picture of our rubber band in the tensile testing apparatus, unstretched.}
     \label{fig:unstretched}
 \end{figure}
@@ -170,6 +194,50 @@ Due to the Second Law of Thermodynamics, $\Delta S_{\text{net}} \geq 0$. Therefo
     \item Graph the force vs. temperature for each speed. Assume temperature increases linearly during stretching. Label axes clearly.
 
     {\bfseries Solution:} Solution A Here.
+    \begin{figure}[!h]
+        \centering
+
+                % ----- Top Row -----
+        \begin{minipage}{0.45\linewidth}
+            \centering
+            %\includegraphics[width=\linewidth]{./Images/Plot1.png}
+            \fbox{ % Delete once the plot is made
+                \begin{minipage}[c][6cm][c]{\linewidth}
+                    \centering
+                    Plot A 
+                \end{minipage}
+            }
+        \end{minipage}
+        \hspace{1.75em}
+        \begin{minipage}{0.45\linewidth}
+            \centering
+            %\includegraphics[width=\linewidth]{./Images/Plot2.png}
+            \fbox{ % Delete once plot is made
+                \begin{minipage}[c][6cm][c]{\linewidth}
+                    \centering
+                    Plot B 
+                \end{minipage}
+            }
+        \end{minipage}
+
+        \vspace{1em}
+
+        % ----- Bottom Row (Centered) -----
+        \begin{minipage}{0.6\linewidth}
+            \centering
+            %\includegraphics[width=\linewidth]{./Images/Plot3.png}
+            \fbox{ % Delete once plot is made
+                \begin{minipage}[c][6cm][c]{\linewidth}
+                    \centering
+                    Plot C 
+                \end{minipage}
+            }
+        \end{minipage}
+
+        \caption{Force vs. Temperature Graph For Each Speed}
+        \label{fig:fvT}
+    \end{figure}
+
     \addcontentsline{toc}{subsection}{Question B}
     \item Explain your observations. Why are the results from the trials different or the same?
 
@@ -273,6 +341,42 @@ We will place the rubber in a stretched state (holding $L$ constant), allow it t
     \item Graph \textbf{Force vs. Time} for Measurement 1 and Measurement 2. Label axes and the two graphs clearly.
 
     {\bfseries Solution:} Solution E Here.
+    
+    \begin{figure}[h]
+        \centering
+
+        \begin{minipage}{0.45\linewidth}
+            \centering
+            % \includegraphics[width=\linewidth]{Plot4.png}
+            \fbox{ % Delete placeholder
+                \begin{minipage}[c][4cm][c]{\linewidth}
+                    \centering
+                    Plot A
+                \end{minipage}
+            }
+        \end{minipage}
+        \hspace{1.75em}
+        \begin{minipage}{0.45\linewidth}
+            \centering
+            % \includegraphics[width=\linewidth]{Plot5.png}
+            \fbox{ %delete placeholder
+                \begin{minipage}[c][4cm][c]{\linewidth}
+                    \centering
+                    Plot B
+                \end{minipage}
+            }
+        \end{minipage}
+
+        \label{fig:fvt}
+        \caption{"Force vs. Time Graphs for Measurement 1 and Measurement 2"}
+    \end{figure}
+
+    \begin{lstlisting}[language=Python, caption={Code for Solution E Graph}]
+if __name__ == "__main__":
+    break
+    \end{lstlisting}
+
+
     \addcontentsline{toc}{subsection}{Question F}
     \item Fill out Table 2. Identify the "heating peaks" in Measurement 2. Compare the Peak Force to the "Expected Force" (baseline from Measurement 1 at that specific time). Calculate $\Delta F$.
 
@@ -281,6 +385,25 @@ We will place the rubber in a stretched state (holding $L$ constant), allow it t
     \item Plot $\Delta F$ vs $\Delta T$. Apply a linear fit. Turn in this graph, including the fit equation and $R^2$ value.
 
     {\bfseries Solution:} Solution G Here.
+
+    \begin{figure}[h]
+        \centering
+        % \includegraphics[width=\linewidth]{Plot4.png}
+        \fbox{ % Delete placeholder
+            \begin{minipage}[c][6cm][c]{0.8\linewidth}
+                \centering
+                Plot A
+            \end{minipage}
+        }
+        \label{fig:dfvdt}
+        \caption{"Change in Force vs. Change in Temperature Graph"}
+    \end{figure}
+
+    \begin{lstlisting}[language=Python, caption={Code for Solution G Graph}]
+if __name__ == "__main__":
+    break
+    \end{lstlisting}
+
     \addcontentsline{toc}{subsection}{Question H}
     \item The theory relies on the assumption $L \ll N\ell$. How could you change the experiment to test this assumption?
 

@@ -1,0 +1,8 @@
+# Keep Image Folder and Data Folder
+EaRL.log
+EaRL.aux
+EaRL.out
+EaRL.toc
+EaRL.fdb_latexmk
+EaRL.fls
+EaRL.synctex.gz
