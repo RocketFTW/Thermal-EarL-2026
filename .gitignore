@@ -1,8 +1,12 @@
-# Keep Image Folder and Data Folder
-EaRL.log
-EaRL.aux
-EaRL.out
-EaRL.toc
-EaRL.fdb_latexmk
-EaRL.fls
-EaRL.synctex.gz
+# Ignore everything by default
+*
+
+# Do NOT ignore directories themselves 
+# (the trailing slash is important!)
+!Images/
+!Images/**
+!Data/
+!Data/**
+
+# Explicitly un-ignore the one file we care about
+!EaRL.tex
