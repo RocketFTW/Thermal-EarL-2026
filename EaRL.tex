@@ -272,7 +272,7 @@ plt.grid(True)
     \centering
     \includegraphics[width=0.75\textwidth]{./Images/GraphA1.png}
     \caption{The force vs. temperature graph}
-    \label{fig:fvt}
+    \label{fig:fvT}
 \end{figure}
 
     \addcontentsline{toc}{subsection}{Question B}
@@ -317,9 +317,13 @@ We further assume internal energy depends only on temperature independently of e
 \subsection*{Question (To be turned in)}
 \begin{enumerate}[label=\Alph*), start=4]
     \addcontentsline{toc}{subsection}{Question D}
-    \item With these assumptions, the tension force can be expressed in terms of a partial derivative of entropy and temperature. Derive this expression starting from Eq. \ref{eq:combined}. Call this \textbf{Equation (7)}.  (In working Schroeder problem 3.34 one can derive a more complete version of equation 7 which shows both the linearity with L, the spring part, and the linearity with T, the entropic spring part).
+    \item With these assumptions, the tension force can be expressed in terms of a partial derivative of entropy, and also temperature. Derive this expression starting from Eq. \ref{eq:combined}. Call this \textbf{Equation (7)}.  (In working Schroeder problem 3.34 one can derive a more complete version of equation 7 which shows both the linearity with L, the spring part, and the linearity with T, the entropic spring part).
 
-    {\bfseries Solution:} Solution D Here.
+    {\bfseries Solution:} Start with equation 4: 
+    $$\langle F \rangle dL = dU - TdS \implies F = \left(\frac{\partial U}{\partial L}\right)_{T} - T \left(\frac{\partial S}{\partial L}\right)_{T}$$
+    We know from equation 6 that the first partial equals zero which gives
+    $$F = -T \left(\frac{\partial S}{\partial L}\right)_{T}$$
+
 \end{enumerate}
 
 % --- Experiment II ---
