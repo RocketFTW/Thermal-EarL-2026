@@ -270,9 +270,9 @@ plt.grid(True)
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.75\textwidth]{./Images/GraphA1.png}
+    \includegraphics[width=0.75\textwidth]{./Images/Graph A1.png}
     \caption{The force vs. temperature graph}
-    \label{fig:fvT}
+    \label{fig:fvt}
 \end{figure}
 
     \addcontentsline{toc}{subsection}{Question B}
@@ -322,7 +322,9 @@ We further assume internal energy depends only on temperature independently of e
     {\bfseries Solution:} Start with equation 4: 
     $$\langle F \rangle dL = dU - TdS \implies F = \left(\frac{\partial U}{\partial L}\right)_{T} - T \left(\frac{\partial S}{\partial L}\right)_{T}$$
     We know from equation 6 that the first partial equals zero which gives
-    $$F = -T \left(\frac{\partial S}{\partial L}\right)_{T}$$
+    \begin{equation}
+        F = -T \left(\frac{\partial S}{\partial L}\right)_{T}
+    \end{equation}
 
 \end{enumerate}
 
@@ -365,96 +367,212 @@ We will place the rubber in a stretched state (holding $L$ constant), allow it t
         \midrule
         \textbf{Trial} & \textbf{Time (s)} & \textbf{Max Temp} & \textbf{$\Delta$ Temp} & \textbf{Peak Force} & \textbf{Expected Force (No Heat)} & \textbf{$\Delta$ Force} \\
         \midrule
-        1 & 2.98 & $20^{o}C$&$1.1^{o}C$ & $26.7\;N$ & 28.18 N & $1.4\;N$ \\
+        1 & 2.98 & $20^{o}C$&$1.1^{o}C$ & $26.7\;N$ & 29.992 N & $3.292 \;N$ \\
         \midrule
-        2 & 9.3 & $25^{o}C$&$5^{o}C$ & $28.5\;N$ & 18.18 N & $1.8\;N$\\
+        2 & 9.3 & $25^{o}C$&$5^{o}C$ & $28.5\;N$ & 29.976 N & $1.476\;N$\\
         \midrule
-        3 & 16.79 & $30^{o}C$&$5^{o}C$ & $28.9\;N$ & 13.63 N & $0.4\;N$\\
+        3 & 16.79 & $30^{o}C$&$5^{o}C$ & $28.9\;N$ & 29.956 N & $1.056\;N$\\
         \midrule
-        4 & 45.35 & $35^{o}C$&$5^{o}C$ & $29.7\;N$ & 4.54 N & $0.8\;N$\\
+        4 & 45.35 & $35^{o}C$&$5^{o}C$ & $29.7\;N$ & 29.883 N & $0.183\;N$\\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Expected Force was calculated acrroding to the Maxwell Model for stress relaxation, which has the equation $F = F_0 e^{-t/\tau}$.
+
+
+
+The expected force of this rubber band can be calculated using a stress relaxation model. The rubber band was initially stretched a little bit and over time the elastic force decreases as the polymers relax. The Maxwell Model for stress relaxation is given as following: 
+    $$F = F_0e^{-t/\tau}$$
+$\tau$ is a material dependent value that is specific for this elastic band. Using this equation, with our initial force of $F_0 = 30 \;N$ we can calculate the expected behavior of the rubber band as it relaxes with no heat. It is important to note that this approximation is not including heat and the heat applied to the band is what is causing the difference between expected and measured force. 
+%\begin{figure}[!h]
+%    \centering
+%    \includegraphics[width=0.75\textwidth]{SS3.png}
+%    \caption{The force vs. temperature graph}
+%    \label{fig:fvt}
+%\end{figure}
+%\begin{figure}[!h]
+%    \centering
+%    \includegraphics[width=0.75\textwidth]{SS1.PNG}
+%    \caption{The force vs. temperature graph}
+%    \label{fig:fvt}
+%\end{figure}
+%\begin{figure}[!h]
+%    \centering
+%    \includegraphics[width=0.75\textwidth]{SS2.png}
+%    \caption{The force vs. temperature graph}
+%    \label{fig:fvt}
+%\end{figure}
 
 \subsection*{Analysis and Questions (To be turned in)}
 \begin{enumerate}[label=\Alph*), start=5]
     \addcontentsline{toc}{subsection}{Question E}
     \item Graph \textbf{Force vs. Time} for Measurement 1 and Measurement 2. Label axes and the two graphs clearly.
 
-    {\bfseries Solution:} Solution E Here.
+    {\bfseries Solution:} Question E wants us to have 2 measurements. The first one is to have a rubber band at a constant length and watch the force decrease over time. The second one is to have it at the same length and apply a heat gun and watch the force increase. We DO have the second measurement (measurement 2) but we do NOT have measurement 1. As in we did not do it in the earl lab. So instead I used the earl lab PDF as a guideline for this measurement 1 on what should happen. Then I plugged in the values from the earl PDF to get a baseline. With that line I now have a "measurement 1", which was NOT done in the earl lab and this paper wants. 
     
     \begin{figure}[h]
         \centering
 
         \begin{minipage}{0.45\linewidth}
             \centering
-            % \includegraphics[width=\linewidth]{Plot4.png}
+             %\includegraphics[width=\linewidth]{SS1.PNG}
             \fbox{ % Delete placeholder
                 \begin{minipage}[c][4cm][c]{\linewidth}
                     \centering
-                    Plot A
+                    \includegraphics[width=\linewidth]{./Images/SS1.PNG}
                 \end{minipage}
             }
         \end{minipage}
         \hspace{1.75em}
         \begin{minipage}{0.45\linewidth}
             \centering
-            % \includegraphics[width=\linewidth]{Plot5.png}
+            % \includegraphics[width=\linewidth]{ss2.png}
             \fbox{ %delete placeholder
                 \begin{minipage}[c][4cm][c]{\linewidth}
                     \centering
-                    Plot B
+                    \includegraphics[width=\linewidth]{./Images/SS2.png}
                 \end{minipage}
             }
         \end{minipage}
 
-        \label{fig:fvt}
+        \label{fig:fvt2}
         \caption{"Force vs. Time Graphs for Measurement 1 and Measurement 2"}
     \end{figure}
 
-    \begin{lstlisting}[language=Python, caption={Code for Solution E Graph}]
-if __name__ == "__main__":
-    break
-    \end{lstlisting}
+    \newpage
 
+\begin{lstlisting}[language=Python]
+import numpy as np
+import math as m
+import matplotlib.pyplot as plt
+
+# Given values
+F_0 = 30
+
+# Calculate tao
+# Ensure the argument to log is positive and not 1
+ratio = 28.5 / 30
+if ratio <= 0:
+    raise ValueError("Ratio for natural logarithm must be positive")
+if ratio == 1:
+    raise ValueError("Ratio for natural logarithm cannot be 1")
+tao = -600 / m.log(ratio)
+
+print(f"Calculated tao: {tao}")
+
+# Define the function
+def F(t, F0, tao_val):
+    return F0 * np.exp(-t / tao_val)
+
+# Generate t values for plotting, covering the new point 600
+t_values = np.linspace(0, 600, 100) # From 0 to 600 to cover both points
+
+# Calculate F(t) values
+F_values = F(t_values, F_0, tao)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.plot(t_values, F_values, label=f'F(t) = {F_0} * e^(t/{tao:.2f})', color='blue')
+
+# Plot the two given points with the corrected second point
+plt.scatter([0, 600], [30, 28.5], color='red', zorder=5, label='measurement 1')
+plt.text(0, 30, '(0, 30)', fontsize=10, ha='right')
+plt.text(600, 28.5, '(600, 28.5)', fontsize=10, ha='left')
+
+# New data points for 'measurement 2'
+measurement2_x = [2.98, 9.3, 16.79, 45.35]
+measurement2_y = [26.7, 28.5, 28.9, 29.7]
+
+# Plot 'measurement 2' points
+plt.scatter(measurement2_x, measurement2_y, color='green', marker='X', s=100, zorder=5, label='measurement 2')
+
+plt.xlabel('Time in seconds')
+plt.ylabel('Force')
+plt.title('Force vs Time')
+plt.grid(True)
+plt.legend()
+plt.show()
+\end{lstlisting}
 
     \addcontentsline{toc}{subsection}{Question F}
     \item Fill out Table 2. Identify the "heating peaks" in Measurement 2. Compare the Peak Force to the "Expected Force" (baseline from Measurement 1 at that specific time). Calculate $\Delta F$.
 
-    {\bfseries Solution:} Solution F Here.
+    \begin{table}[!h]
+    \centering
+    \addcontentsline{toc}{subsection}{Experimental Data: Table 2}
+    \caption{Data analysis for force as a function of temperature.}
+    \label{tab:exp2-2}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{@{}p{1cm} p{1.5cm} p{2cm} p{2cm} p{1.5cm} p{2cm} p{1.5cm}@{}}
+        \toprule
+        \multicolumn{7}{l}{\textbf{Initial Unstretched Temperature: $18.9^{o}C$}} \\
+        \midrule
+        \textbf{Trial} & \textbf{Time (s)} & \textbf{Max Temp} & \textbf{$\Delta$ Temp} & \textbf{Peak Force} & \textbf{Expected Force (No Heat)} & \textbf{$\Delta$ Force} \\
+        \midrule
+        1 & 2.98 & $20^{o}C$&$1.1^{o}C$ & $26.7\;N$ & 29.992 N & $3.292 \;N$ \\
+        \midrule
+        2 & 9.3 & $25^{o}C$&$5^{o}C$ & $28.5\;N$ & 29.976 N & $1.476\;N$\\
+        \midrule
+        3 & 16.79 & $30^{o}C$&$5^{o}C$ & $28.9\;N$ & 29.956 N & $1.056\;N$\\
+        \midrule
+        4 & 45.35 & $35^{o}C$&$5^{o}C$ & $29.7\;N$ & 29.883 N & $0.183\;N$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+The 'Max temp' is the 'Heating Peak', which were 20, 25, 30, and 35 Celsius. I got values for those temperatures and compared the force that was measured vs the force from the theoretical line to get $\Delta$ Force. 
+
+
+
+\newpage
     \addcontentsline{toc}{subsection}{Question G}
     \item Plot $\Delta F$ vs $\Delta T$. Apply a linear fit. Turn in this graph, including the fit equation and $R^2$ value.
-
-    {\bfseries Solution:} Solution G Here.
-
-    \begin{figure}[h]
-        \centering
-        % \includegraphics[width=\linewidth]{Plot4.png}
-        \fbox{ % Delete placeholder
-            \begin{minipage}[c][6cm][c]{0.8\linewidth}
-                \centering
-                Plot A
-            \end{minipage}
-        }
-        \label{fig:dfvdt}
-        \caption{"Change in Force vs. Change in Temperature Graph"}
+    
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./Images/SS3.png}
+    \caption{The force vs. temperature graph}
+    \label{fig:fvt3}
     \end{figure}
 
-    \begin{lstlisting}[language=Python, caption={Code for Solution G Graph}]
-if __name__ == "__main__":
-    break
-    \end{lstlisting}
+\begin{lstlisting}[language=Python]
+import matplotlib.pyplot as plt
+
+
+plt.figure(figsize=(10, 6))
+plt.scatter(temperature_data, change_in_force_data, color='blue', label='Data Points')
+regression_line_y = slope * temperature_data + intercept
+plt.plot(temperature_data, regression_line_y, color='red', label=f'Linear Regression (R^2 = {r_squared:.2f})')
+plt.xlabel('Temp (C)')
+plt.ylabel('Change in Force (N)')
+plt.title('Change in Force vs. Temperature with Linear Regression')
+plt.text(0.05, 0.95, f'y = {slope:.2f}x + {intercept:.2f}', transform=plt.gca().transAxes, fontsize=12, color='red', verticalalignment='top')
+plt.text(0.05, 0.90, f'R^2 = {r_squared:.2f}', transform=plt.gca().transAxes, fontsize=12, color='red', verticalalignment='top')
+plt.legend()
+plt.grid(True)
+plt.show()
+\end{lstlisting}
+    
+
 
     \addcontentsline{toc}{subsection}{Question H}
     \item The theory relies on the assumption $L \ll N\ell$. How could you change the experiment to test this assumption?
 
-    {\bfseries Solution:} Solution H Here.
+    {\bfseries Solution:} I recognize this as a thing from the earl PDF and the textbook.
+
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./Images/QuesionII.PNG}
+    \label{fig:fvt4}
+    \end{figure}
+    To test this I would Like to try to break this assumption. The way to break the assumption is to try to make L as big as possible and N as small as possible to try to make $L \ll N\ell$ break. Basically I would get as thin a strip of rubber, preferably 2 molecules long, and then test that. Since we can't do that in our lab, I would like to get as thin as possible a  rubber piece and stretch that. 
+
+    
     \addcontentsline{toc}{subsection}{Question I}
     \item What are the conditions/limits for the force law derivation (Equation 7), and are they consistent with this experiment?
 
-    {\bfseries Solution:} Solution I Here.
+    {\bfseries Solution:} The assumptions of \textbf{Equation (7)} are as follows:
+    $$F = -T \left(\frac{\partial S}{\partial L}\right)_{T}$$
+    Are that the extension is isothermal and the system is closed.  This is because we use the First Law of Thermodynamics without accounting for any changing chemical potential and for equation 3 we explicitly state that we use the isothermal equation for the stretching of the rubber band.  We then take a partial derivative with temperature held constant to get our final equation as shown above.
 \end{enumerate}
 
 \begin{thebibliography}{9}
